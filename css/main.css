@@ -851,9 +851,12 @@ body {
   margin-bottom: 4px;
 }
 
+.modal-input-box {
+  margin-bottom: 10px;
+}
+
 .modal-input-box-item {
   position: relative;
-  margin-bottom: 10px;
 }
 
 .modal-form-svgicon {
@@ -915,14 +918,17 @@ body {
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .chek-link {
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 1.11;
   letter-spacing: 0.03em;
   color: var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+  text-decoration: none;
 }
 
 .modal-chekbox {
@@ -942,7 +948,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.chekbox-icon-chek:hover {
+  border: 1px solid var(--accent-color);
 }
 
 .icon-modal-check {
@@ -957,4 +967,8 @@ body {
 
 .chekbox-input:checked + .label-chek .icon-modal-check {
   fill: var(--hero-color);
+}
+
+.chekbox-input:focus + .label-chek .chekbox-icon-chek {
+  border-color: var(--accent-color);
 }/*# sourceMappingURL=main.css.map */
