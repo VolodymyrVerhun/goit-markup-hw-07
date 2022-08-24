@@ -1,32 +1,46 @@
 .features__title,
 .team__title {
-//   color: var(--primary-text-color);
-//   font-weight: 700;
-//   font-size: 36px;
-//   line-height: 1.17;
-  text-align: center;
+text-align: center;
 @include font (700, 36px, 1.17, null, var(--primary-text-color) );
 }
-
-
 .features {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
   padding-top: 94px;
   padding-bottom: 94px;
+  }
 }
 .features__list {
-  display: flex;
-}
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+ }
+
+
+.features__box:not(:last-child)  {
+margin-bottom: 30px}
 
 .features__box {
-  display: inline-block;
+@media screen and (min-width: 768px) {
+width: calc((100% - 30px) / 2);
+display: inline-block;
+&:nth-last-child(-n + 2) {
+  margin-bottom: 0;}
+&:nth-child(2n + 1) {
+  margin-right: 30px;}}
+
+@media screen and (min-width: 1200px) {
   width: calc((100% - 3 * 30px) / 4);
   margin-right: 30px;
-}
-.features__box:nth-child(4n) {
-  margin-right: 0;
-}
+  &:nth-child(4n) {margin-right: 0;};
+  &:nth-child(-n + 2) {
+    margin-bottom: 0;} }
+   }
 
 .features__subtitle {
+  text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -39,7 +53,7 @@
 }
 
 .features__icon-box {
-  width: 270px;
+  width: 100%;
   height: 120px;
   border-radius: 4px;
   background-color: #f5f4fa;
